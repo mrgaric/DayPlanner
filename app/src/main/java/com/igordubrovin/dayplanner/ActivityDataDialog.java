@@ -29,7 +29,6 @@ public class ActivityDataDialog extends AppCompatActivity {
         Intent intent = getIntent();
         toolbarData = (Toolbar)findViewById(R.id.toolbar_view_data);
         setSupportActionBar(toolbarData);
-        toolbarData.setTitle("Задачи");
         toolbarData.setNavigationIcon(R.drawable.ic_checkmark_holo_light);
         toolbarData.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

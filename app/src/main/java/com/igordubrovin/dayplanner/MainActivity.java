@@ -53,6 +53,9 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
 
         toolbar = (Toolbar)findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        toolbar.setLogo(R.mipmap.ic_launcher);
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date(System.currentTimeMillis()));
