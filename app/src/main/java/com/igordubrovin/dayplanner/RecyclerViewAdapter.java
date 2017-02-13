@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -42,45 +43,56 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
         holder.tvDate1.setText(date);
         theme = "Тема: " + mapArrayList.get(position).get(0).get(BuilderDateData.KEY_THEME);
         holder.tvTheme1.setText(theme);
+        if (!mapArrayList.get(position).get(0).get(BuilderDateData.KEY_THEME).isEmpty())
+            holder.ivCercle1.setVisibility(View.VISIBLE);
 
         date = getDateStr(mapArrayList.get(position).get(1));
         holder.tvDay2.setText(mapArrayList.get(position).get(1).get(BuilderDateData.KEY_DAY_WEEK));
         holder.tvDate2.setText(date);
         theme = "Тема: " + mapArrayList.get(position).get(1).get(BuilderDateData.KEY_THEME);
         holder.tvTheme2.setText(theme);
+        if (!mapArrayList.get(position).get(1).get(BuilderDateData.KEY_THEME).isEmpty())
+            holder.ivCercle2.setVisibility(View.VISIBLE);
 
         date = getDateStr(mapArrayList.get(position).get(2));
         holder.tvDay3.setText(mapArrayList.get(position).get(2).get(BuilderDateData.KEY_DAY_WEEK));
         holder.tvDate3.setText(date);
         theme = "Тема: " + mapArrayList.get(position).get(2).get(BuilderDateData.KEY_THEME);
         holder.tvTheme3.setText(theme);
+        if (!mapArrayList.get(position).get(2).get(BuilderDateData.KEY_THEME).isEmpty())
+            holder.ivCercle3.setVisibility(View.VISIBLE);
 
         date = getDateStr(mapArrayList.get(position).get(3));
         holder.tvDay4.setText(mapArrayList.get(position).get(3).get(BuilderDateData.KEY_DAY_WEEK));
         holder.tvDate4.setText(date);
         theme = "Тема: " + mapArrayList.get(position).get(3).get(BuilderDateData.KEY_THEME);
         holder.tvTheme4.setText(theme);
+        if (!mapArrayList.get(position).get(3).get(BuilderDateData.KEY_THEME).isEmpty())
+            holder.ivCercle4.setVisibility(View.VISIBLE);
 
         date = getDateStr(mapArrayList.get(position).get(4));
         holder.tvDay5.setText(mapArrayList.get(position).get(4).get(BuilderDateData.KEY_DAY_WEEK));
         holder.tvDate5.setText(date);
         theme = "Тема: " + mapArrayList.get(position).get(4).get(BuilderDateData.KEY_THEME);
         holder.tvTheme5.setText(theme);
+        if (!mapArrayList.get(position).get(4).get(BuilderDateData.KEY_THEME).isEmpty())
+            holder.ivCercle5.setVisibility(View.VISIBLE);
 
         date = getDateStr(mapArrayList.get(position).get(5));
         holder.tvDay6.setText(mapArrayList.get(position).get(5).get(BuilderDateData.KEY_DAY_WEEK));
         holder.tvDate6.setText(date);
         theme = "Тема: " + mapArrayList.get(position).get(5).get(BuilderDateData.KEY_THEME);
         holder.tvTheme6.setText(theme);
+        if (!mapArrayList.get(position).get(5).get(BuilderDateData.KEY_THEME).isEmpty())
+            holder.ivCercle6.setVisibility(View.VISIBLE);
 
         date = getDateStr(mapArrayList.get(position).get(6));
         holder.tvDay7.setText(mapArrayList.get(position).get(6).get(BuilderDateData.KEY_DAY_WEEK));
         holder.tvDate7.setText(date);
         theme = "Тема: " + mapArrayList.get(position).get(6).get(BuilderDateData.KEY_THEME);
         holder.tvTheme7.setText(theme);
-
-        holder.tvTheme1.setSelected(true);
-
+        if (!mapArrayList.get(position).get(6).get(BuilderDateData.KEY_THEME).isEmpty())
+            holder.ivCercle7.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -173,7 +185,13 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
         CardView cvPath6;
         CardView cvPath7;
 
-        TextView test;
+        ImageView ivCercle1;
+        ImageView ivCercle2;
+        ImageView ivCercle3;
+        ImageView ivCercle4;
+        ImageView ivCercle5;
+        ImageView ivCercle6;
+        ImageView ivCercle7;
 
         ScrollView scrollView;
 
@@ -217,6 +235,14 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
             cvPath5 = (CardView)itemView.findViewById(R.id.cvPath5);
             cvPath6 = (CardView)itemView.findViewById(R.id.cvPath6);
             cvPath7 = (CardView)itemView.findViewById(R.id.cvPath7);
+
+            ivCercle1 = (ImageView)itemView.findViewById(R.id.ivCircle1);
+            ivCercle2 = (ImageView)itemView.findViewById(R.id.ivCircle2);
+            ivCercle3 = (ImageView)itemView.findViewById(R.id.ivCircle3);
+            ivCercle4 = (ImageView)itemView.findViewById(R.id.ivCircle4);
+            ivCercle5 = (ImageView)itemView.findViewById(R.id.ivCircle5);
+            ivCercle6 = (ImageView)itemView.findViewById(R.id.ivCircle6);
+            ivCercle7 = (ImageView)itemView.findViewById(R.id.ivCircle7);
 
             cvPath1.setOnCreateContextMenuListener(this);
             cvPath2.setOnCreateContextMenuListener(this);

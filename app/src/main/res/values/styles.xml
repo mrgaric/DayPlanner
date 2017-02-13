@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#9dbdba</item>
-        <item name="colorPrimaryDark">#9dbdba</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#938DC8</item>
+        <item name="colorPrimaryDark">#726AB1</item>
+        <item name="colorAccent">#A24E7C</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -14,7 +14,7 @@
     </style>
 
     <style name="MyDialogStyle" parent="Theme.AppCompat.Dialog">
-        <item name="colorPrimary">#BDFEBE</item>
+        <item name="colorPrimary">#DDCAE7</item>
         <item name="android:textColorPrimary">@android:color/black</item>
         <item name="subtitleTextColor">@android:color/black</item>
         <item name="windowNoTitle">true</item>

@@ -5,9 +5,7 @@
     tools:context=".ActivityAddDataToDB"
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
-
+    android:layout_height="match_parent">
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -22,15 +20,15 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-    <TextView
-        android:gravity="top|center_horizontal"
+        android:background="#F7EEF6">
+    <TextView android:gravity="top|center_horizontal"
         android:textSize="20sp"
         android:layout_width="40dp"
         android:layout_height="match_parent"
         android:id="@+id/tvDayWeek"
         android:layout_marginTop="20dp"
-        />
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:background="#F7EEF6"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -58,7 +56,8 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="8dp"
+            android:background="#F0EEF7">
             <EditText
                 android:id="@+id/edit_text_theme"
                 android:layout_width="match_parent"
@@ -76,13 +75,15 @@
                 android:textAllCaps="false"
                 android:text="Сохранить"
                 android:id="@+id/btn_add_data"
+                android:background="#A8439D"
                 />
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/scrl_edit_add"
                 android:layout_alignParentTop="true"
-                android:layout_above="@id/btn_add_data">
+                android:layout_above="@id/btn_add_data"
+                android:background="#F0EEF7">
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

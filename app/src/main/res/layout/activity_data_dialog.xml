@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context="com.igordubrovin.dayplanner.ActivityDataDialog"
     android:orientation="vertical"
-
+    android:background="#FFEFF6"
     >
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
