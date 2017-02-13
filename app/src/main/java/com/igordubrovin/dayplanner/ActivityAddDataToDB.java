@@ -13,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,7 +22,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ActivityAddDataToDB extends AppCompatActivity implements UpdateDialog.CallbackActivityUpdateDialog {
     Spinner spDay;
@@ -144,7 +142,7 @@ public class ActivityAddDataToDB extends AppCompatActivity implements UpdateDial
                     imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
                 }
                 if (!etTheme.getText().toString().equals("") && !etData.getText().toString().equals("")) {
-                    mapData.put(DataBase.COLUMN_DAY_MONTH_DB_TABLE, String.valueOf(spDay.getSelectedItem()));
+                    mapData.put(DataBase.COLUMN_DAY_MONTH_DB_TABLE, String.valueOf(spDay.getSelectedItemPosition()+1));
                     mapData.put(DataBase.COLUMN_MONTH_TABLE, String.valueOf(spMonth.getSelectedItemPosition()));
                     mapData.put(DataBase.COLUMN_YEAR_TABLE, String.valueOf(spYear.getSelectedItem()));
                     mapData.put(DataBase.COLUMN_THEME_TABLE, etTheme.getText().toString());
