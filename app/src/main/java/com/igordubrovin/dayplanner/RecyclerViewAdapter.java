@@ -45,6 +45,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
         holder.tvTheme1.setText(theme);
         if (!mapArrayList.get(position).get(0).get(BuilderDateData.KEY_THEME).isEmpty())
             holder.ivCercle1.setVisibility(View.VISIBLE);
+        else holder.ivCercle1.setVisibility(View.GONE);
 
         date = getDateStr(mapArrayList.get(position).get(1));
         holder.tvDay2.setText(mapArrayList.get(position).get(1).get(BuilderDateData.KEY_DAY_WEEK));
@@ -53,6 +54,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
         holder.tvTheme2.setText(theme);
         if (!mapArrayList.get(position).get(1).get(BuilderDateData.KEY_THEME).isEmpty())
             holder.ivCercle2.setVisibility(View.VISIBLE);
+        else holder.ivCercle2.setVisibility(View.GONE);
 
         date = getDateStr(mapArrayList.get(position).get(2));
         holder.tvDay3.setText(mapArrayList.get(position).get(2).get(BuilderDateData.KEY_DAY_WEEK));
@@ -61,6 +63,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
         holder.tvTheme3.setText(theme);
         if (!mapArrayList.get(position).get(2).get(BuilderDateData.KEY_THEME).isEmpty())
             holder.ivCercle3.setVisibility(View.VISIBLE);
+        else holder.ivCercle3.setVisibility(View.GONE);
 
         date = getDateStr(mapArrayList.get(position).get(3));
         holder.tvDay4.setText(mapArrayList.get(position).get(3).get(BuilderDateData.KEY_DAY_WEEK));
@@ -69,6 +72,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
         holder.tvTheme4.setText(theme);
         if (!mapArrayList.get(position).get(3).get(BuilderDateData.KEY_THEME).isEmpty())
             holder.ivCercle4.setVisibility(View.VISIBLE);
+        else holder.ivCercle4.setVisibility(View.GONE);
 
         date = getDateStr(mapArrayList.get(position).get(4));
         holder.tvDay5.setText(mapArrayList.get(position).get(4).get(BuilderDateData.KEY_DAY_WEEK));
@@ -77,6 +81,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
         holder.tvTheme5.setText(theme);
         if (!mapArrayList.get(position).get(4).get(BuilderDateData.KEY_THEME).isEmpty())
             holder.ivCercle5.setVisibility(View.VISIBLE);
+        else holder.ivCercle5.setVisibility(View.GONE);
 
         date = getDateStr(mapArrayList.get(position).get(5));
         holder.tvDay6.setText(mapArrayList.get(position).get(5).get(BuilderDateData.KEY_DAY_WEEK));
@@ -85,6 +90,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
         holder.tvTheme6.setText(theme);
         if (!mapArrayList.get(position).get(5).get(BuilderDateData.KEY_THEME).isEmpty())
             holder.ivCercle6.setVisibility(View.VISIBLE);
+        else holder.ivCercle6.setVisibility(View.GONE);
 
         date = getDateStr(mapArrayList.get(position).get(6));
         holder.tvDay7.setText(mapArrayList.get(position).get(6).get(BuilderDateData.KEY_DAY_WEEK));
@@ -93,6 +99,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
         holder.tvTheme7.setText(theme);
         if (!mapArrayList.get(position).get(6).get(BuilderDateData.KEY_THEME).isEmpty())
             holder.ivCercle7.setVisibility(View.VISIBLE);
+        else holder.ivCercle7.setVisibility(View.GONE);
     }
 
     @Override
