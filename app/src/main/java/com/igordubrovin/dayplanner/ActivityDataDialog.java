@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 public class ActivityDataDialog extends AppCompatActivity {
     TextView tvData;
+    TextView tvTheme;
     Toolbar toolbarData;
     private int day;
     private int month;
@@ -28,9 +29,7 @@ public class ActivityDataDialog extends AppCompatActivity {
         Intent intent = getIntent();
         toolbarData = (Toolbar)findViewById(R.id.toolbar_view_data);
         setSupportActionBar(toolbarData);
-        theme = intent.getStringExtra("theme");
-        toolbarData.setSubtitle(theme);
-        toolbarData.setTitle("Задачи дня");
+        toolbarData.setTitle("Задачи");
         toolbarData.setNavigationIcon(R.drawable.ic_checkmark_holo_light);
         toolbarData.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +44,9 @@ public class ActivityDataDialog extends AppCompatActivity {
         data = intent.getStringExtra("data");
         tvData = (TextView)findViewById(R.id.tv_data);
         tvData.setText(data);
+        theme = intent.getStringExtra("theme");
+        tvTheme = (TextView)findViewById(R.id.tv_theme);
+        tvTheme.setText(theme);
     }
 
     @Override
@@ -63,7 +65,7 @@ public class ActivityDataDialog extends AppCompatActivity {
             case R.id.action_edit:
                 Intent intent = new Intent(this, ActivityAddDataToDB.class);
                 intent.putExtra("data", tvData.getText().toString());
-                intent.putExtra("theme", toolbarData.getSubtitle());
+                intent.putExtra("theme", tvTheme.getText().toString());
                 intent.putExtra("day", day);
                 intent.putExtra("month", month-1);
                 intent.putExtra("year", year);
@@ -81,7 +83,7 @@ public class ActivityDataDialog extends AppCompatActivity {
             if (resultCode == RESULT_OK){
                 tvData = (TextView)findViewById(R.id.tv_data);
                 tvData.setText(data.getStringExtra("data"));
-                toolbarData.setSubtitle(data.getStringExtra("theme"));
+                tvTheme.setText(data.getStringExtra("theme"));
             }
             else if (resultCode == RESULT_CANCELED){
                 finish();
