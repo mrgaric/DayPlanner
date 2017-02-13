@@ -37,7 +37,6 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
     public void onBindViewHolder(ViewHolder holder, final int position) {
         String date;
         String theme;
-        rstScrlView(holder);
         date = getDateStr(mapArrayList.get(position).get(0));
         holder.tvDay1.setText(mapArrayList.get(position).get(0).get(BuilderDateData.KEY_DAY_WEEK));
         holder.tvDate1.setText(date);
@@ -79,6 +78,9 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
         holder.tvDate7.setText(date);
         theme = "Тема: " + mapArrayList.get(position).get(6).get(BuilderDateData.KEY_THEME);
         holder.tvTheme7.setText(theme);
+
+        holder.tvTheme1.setSelected(true);
+
     }
 
     @Override
@@ -170,6 +172,8 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
         CardView cvPath5;
         CardView cvPath6;
         CardView cvPath7;
+
+        TextView test;
 
         ScrollView scrollView;
 
